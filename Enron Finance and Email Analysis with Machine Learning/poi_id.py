@@ -9,14 +9,17 @@ import numpy as np
 from sklearn import preprocessing
 from sklearn import tree
 from sklearn.cross_validation import train_test_split
+from sklearn.cluster import KMeans
 from sklearn.metrics import accuracy_score
 from sklearn.metrics import precision_score
 from sklearn.metrics import recall_score
 from sklearn.naive_bayes import GaussianNB
+from sklearn.svm import SVC
 
 sys.path.append("tools")
-from scatplot import scatplot
 from feature_format import featureFormat, targetFeatureSplit
+import new_features
+from scatplot import scatplot
 from tester import dump_classifier_and_data
 
 
@@ -39,14 +42,16 @@ financial_features = ['salary',
                       'other',
                       'long_term_incentive',
                       'restricted_stock',
-                      'director_fees'] 
+                      'director_fees',
+                      'total_comp'] #created from 'new_features' function
 ### Units are generally number of emails messages;
 ### notable exception is ‘email_address’, which is a text string
 email_features = ['to_messages',
                   'from_poi_to_this_person',
                   'from_messages',
                   'from_this_person_to_poi',
-                  'shared_receipt_with_poi']
+                  'shared_receipt_with_poi',
+                  'fraction_to_poi'] #created from 'new_features' function
 features_list = poi_label + financial_features + email_features
 
 ### Load the dictionary containing the dataset
@@ -60,26 +65,49 @@ data_dict.pop('THE TRAVEL AGENCY IN THE PARK', 0)
 
 ### Task 3: Create new feature(s)
 ### Store to my_dataset for easy export below.
-
 my_dataset = copy(data_dict)
+my_dataset = new_features.add_poi_email_fraction(my_dataset)
+my_dataset = new_features.total_comp(my_dataset)
 
 
+### This section identifies the top 8 features in features_list and disregards
+### all other features.  The classifier will proceed using the reduced
+### features list below.
+data = featureFormat(my_dataset, features_list, sort_keys=True)
+labels, features = targetFeatureSplit(data)
+dtc_clf = tree.DecisionTreeClassifier()
+features_train, features_test, labels_train, labels_test = \
+    train_test_split(features, labels, test_size=0.3, random_state=42)
+dtc_clf.fit(features_train, labels_train)
+pred = dtc_clf.predict(features_test)
+features_list_post_DTC = ['poi']
+try:
+    importances = dtc_clf.feature_importances_
+    indices = np.argsort(importances)[::-1]
+    print 'Feature Ranking: '
+    for i in range(8):
+        print "{} feature Number {} ({}) Feature: {}".format(
+        i+1, 
+        indices[i],
+        importances[indices[i]],
+        features_list[indices[i]] )
+        if features_list != 'poi':
+            features_list_post_DTC.append(features_list[indices[i]])
+except AttributeError:
+    print "*** Not DecisionTreeClassifier"
+
+print "New Features List: ", features_list_post_DTC
 ### Extract features and labels from dataset for local testing
-data = featureFormat(my_dataset, features_list, sort_keys = True)
+data = featureFormat(my_dataset, features_list_post_DTC, sort_keys=True)
 labels, features = targetFeatureSplit(data)
 
 
 ### Task 4: Try a varity of classifiers
-### Please name your classifier clf for easy export below.
-### Note that if you want to do PCA or other multi-stage operations,
-### you'll need to use Pipelines. For more info:
-### http://scikit-learn.org/stable/modules/pipeline.html
+clf_gaussian = GaussianNB()
+clf_kmeans = KMeans(n_clusters=2)
+clf_svc = SVC(kernel='rbf', C=100)
 
-# Provided to give you a starting point. Try a variety of classifiers.
-
-#clf = GaussianNB()
-clf = tree.DecisionTreeClassifier()
-
+clf = clf_kmeans
 ### Task 5: Tune your classifier to achieve better than .3 precision and recall 
 ### using our testing script. Check the tester.py script in the final project
 ### folder for details on the evaluation method, especially the test_classifier
@@ -94,18 +122,9 @@ features_train, features_test, labels_train, labels_test = \
 
 clf.fit(features_train, labels_train)
 pred = clf.predict(features_test)
-
-print "Accuracy score: ", accuracy_score(pred, labels_test)
-
-importances = clf.feature_importances_
-indices = np.argsort(importances)[::-1]
-print 'Feature Ranking: '
-for i in range(8):
-    print "{} feature Number {} ({}) Feature: {}".format(
-    i+1, 
-    indices[i],
-    importances[indices[i]],
-    features_list[indices[i]] )
+print "Accuracy score: ", accuracy_score(labels_test, pred)
+print "Precision: ", precision_score(labels_test, pred)
+print "Recall: ", recall_score(labels_test, pred)
 
 
 ### Task 6: Dump your classifier, dataset, and features_list so anyone can
