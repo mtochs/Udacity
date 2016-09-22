@@ -21,7 +21,10 @@ from feature_format import featureFormat, targetFeatureSplit
 import new_features
 from scatplot import scatplot
 from tester import dump_classifier_and_data
+import iter_function
 
+def mean(numbers):
+    return float(sum(numbers)) / max(len(numbers), 1)
 
 ### Task 1: Select features
 ### features_list is a list of strings, each of which is a feature name.
@@ -39,19 +42,13 @@ financial_features = ['salary',
                       'total_stock_value',
                       'expenses',
                       'exercised_stock_options',
-                      'other',
                       'long_term_incentive',
                       'restricted_stock',
                       'director_fees',
                       'total_comp'] #created from 'new_features' function
 ### Units are generally number of emails messages;
 ### notable exception is ‘email_address’, which is a text string
-email_features = ['to_messages',
-                  'from_poi_to_this_person',
-                  'from_messages',
-                  'from_this_person_to_poi',
-                  'shared_receipt_with_poi',
-                  'fraction_to_poi'] #created from 'new_features' function
+email_features = ['fraction_to_poi'] #created from 'new_features' function
 features_list = poi_label + financial_features + email_features
 
 ### Load the dictionary containing the dataset
@@ -73,31 +70,9 @@ my_dataset = new_features.total_comp(my_dataset)
 ### This section identifies the top 8 features in features_list and disregards
 ### all other features.  The classifier will proceed using the reduced
 ### features list below.
-data = featureFormat(my_dataset, features_list, sort_keys=True)
-labels, features = targetFeatureSplit(data)
-dtc_clf = tree.DecisionTreeClassifier()
-features_train, features_test, labels_train, labels_test = \
-    train_test_split(features, labels, test_size=0.3, random_state=42)
-dtc_clf.fit(features_train, labels_train)
-pred = dtc_clf.predict(features_test)
-features_list_post_DTC = ['poi']
-try:
-    importances = dtc_clf.feature_importances_
-    indices = np.argsort(importances)[::-1]
-    print 'Feature Ranking: '
-    for i in range(8):
-        print "{} feature Number {} ({}) Feature: {}".format(
-        i+1, 
-        indices[i],
-        importances[indices[i]],
-        features_list[indices[i]] )
-        if features_list != 'poi':
-            features_list_post_DTC.append(features_list[indices[i]])
-except AttributeError:
-    print "*** Not DecisionTreeClassifier"
+features_list_post_DTC = iter_function.top_features(my_dataset, features_list, 1000, 8)
 
 print "New Features List: ", features_list_post_DTC
-
 
 ### Extract features and labels from dataset for local testing
 data = featureFormat(my_dataset, features_list_post_DTC, sort_keys=True)
@@ -118,28 +93,11 @@ clf = clf_kmeans
 ### stratified shuffle split cross validation. For more info: 
 ### http://scikit-learn.org/stable/modules/generated/sklearn.cross_validation.StratifiedShuffleSplit.html
 
-# Example starting point. Try investigating other evaluation techniques!
+accuracy, precision, recall = iter_function.clf_stats(clf, features, labels, 1000)
 
-accuracy = []
-precision = []
-recall = []
-for n in range(1000):
-    features_train, features_test, labels_train, labels_test = \
-        train_test_split(features, labels, test_size=0.3, random_state=42)
-    clf.fit(features_train, labels_train)
-    pred = clf.predict(features_test)
-    accuracy.append(accuracy_score(labels_test, pred))
-    precision.append(precision_score(labels_test, pred))
-    recall.append(recall_score(labels_test, pred))
-
-
-def mean(numbers):
-    return float(sum(numbers)) / max(len(numbers), 1)
-
-print "Accuracy score: ", mean(accuracy)
-print "Precision: ", mean(precision)
-print "Recall: ", mean(recall)
-
+print "Accuracy score: ", accuracy
+print "Precision: ", precision
+print "Recall: ", recall
 
 ### Task 6: Dump your classifier, dataset, and features_list so anyone can
 ### check your results. You do not need to change anything below, but make sure
