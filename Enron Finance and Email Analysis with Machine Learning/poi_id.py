@@ -83,7 +83,7 @@ clf_gaussian = GaussianNB()
 clf_kmeans = KMeans(n_clusters=2)
 clf_svc = SVC(kernel='rbf', C=100)
 
-clf = clf_kmeans
+clf = clf_gaussian
 
 ### Task 5: Tune your classifier to achieve better than .3 precision and recall 
 ### using our testing script. Check the tester.py script in the final project
