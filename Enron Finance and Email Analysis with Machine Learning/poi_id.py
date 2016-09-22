@@ -71,7 +71,6 @@ my_dataset = new_features.total_comp(my_dataset)
 ### all other features.  The classifier will proceed using the reduced
 ### features list below.
 features_list_post_DTC = iter_function.top_features(my_dataset, features_list, 1000, 8)
-
 print "New Features List: ", features_list_post_DTC
 
 ### Extract features and labels from dataset for local testing
@@ -94,7 +93,6 @@ clf = clf_kmeans
 ### http://scikit-learn.org/stable/modules/generated/sklearn.cross_validation.StratifiedShuffleSplit.html
 
 accuracy, precision, recall = iter_function.clf_stats(clf, features, labels, 1000)
-
 print "Accuracy score: ", accuracy
 print "Precision: ", precision
 print "Recall: ", recall

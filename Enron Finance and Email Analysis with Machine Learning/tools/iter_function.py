@@ -20,8 +20,11 @@ def mean(numbers):
     return float(sum(numbers)) / max(len(numbers), 1)
 
 
-
-def top_features(my_dataset, features_list, iterations, features_qty):
+"""
+Function utilizes Decision Tree Classifier to identify top features for a
+given data set.
+"""
+def top_features(my_dataset, features_list, iterations=1000, features_qty=8):
     data = featureFormat(my_dataset, features_list, sort_keys=True)
     labels, features = targetFeatureSplit(data)
     dtc_clf = tree.DecisionTreeClassifier()
@@ -53,9 +56,11 @@ def top_features(my_dataset, features_list, iterations, features_qty):
     return features_list_post_DTC
     
 
-
-
-def clf_stats(clf, features, labels, iterations):
+"""
+Function runs through mutliple classifying iterations to get a better reading
+on accuracy, precision, and recall.
+"""
+def clf_stats(clf, features, labels, iterations=1000):
     accuracy = []
     precision = []
     recall = []
