@@ -120,14 +120,25 @@ clf = clf_kmeans
 
 # Example starting point. Try investigating other evaluation techniques!
 
-features_train, features_test, labels_train, labels_test = \
-    train_test_split(features, labels, test_size=0.3, random_state=42)
+accuracy = []
+precision = []
+recall = []
+for n in range(1000):
+    features_train, features_test, labels_train, labels_test = \
+        train_test_split(features, labels, test_size=0.3, random_state=42)
+    clf.fit(features_train, labels_train)
+    pred = clf.predict(features_test)
+    accuracy.append(accuracy_score(labels_test, pred))
+    precision.append(precision_score(labels_test, pred))
+    recall.append(recall_score(labels_test, pred))
 
-clf.fit(features_train, labels_train)
-pred = clf.predict(features_test)
-print "Accuracy score: ", accuracy_score(labels_test, pred)
-print "Precision: ", precision_score(labels_test, pred)
-print "Recall: ", recall_score(labels_test, pred)
+
+def mean(numbers):
+    return float(sum(numbers)) / max(len(numbers), 1)
+
+print "Accuracy score: ", mean(accuracy)
+print "Precision: ", mean(precision)
+print "Recall: ", mean(recall)
 
 
 ### Task 6: Dump your classifier, dataset, and features_list so anyone can
