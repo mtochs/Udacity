@@ -97,6 +97,8 @@ except AttributeError:
     print "*** Not DecisionTreeClassifier"
 
 print "New Features List: ", features_list_post_DTC
+
+
 ### Extract features and labels from dataset for local testing
 data = featureFormat(my_dataset, features_list_post_DTC, sort_keys=True)
 labels, features = targetFeatureSplit(data)
@@ -108,6 +110,7 @@ clf_kmeans = KMeans(n_clusters=2)
 clf_svc = SVC(kernel='rbf', C=100)
 
 clf = clf_kmeans
+
 ### Task 5: Tune your classifier to achieve better than .3 precision and recall 
 ### using our testing script. Check the tester.py script in the final project
 ### folder for details on the evaluation method, especially the test_classifier
