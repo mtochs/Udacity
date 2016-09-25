@@ -86,7 +86,6 @@ features_list_SKB = poi_label + skb_features
 print "New Features List: ", features_list_SKB
 
 
-
 ### Extract features and labels from dataset for local testing
 data = featureFormat(my_dataset, features_list_SKB, sort_keys=True)
 labels, features = targetFeatureSplit(data)

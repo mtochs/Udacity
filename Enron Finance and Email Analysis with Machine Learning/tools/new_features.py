@@ -5,10 +5,6 @@ Simple function that displays a scatter plot with two feature inputs
 from data_dict
 """
 
-
-import numpy as np
-from feature_format import featureFormat, targetFeatureSplit
-
 def computeFraction( poi_messages, all_messages ):
     """ given a number messages to/from POI (numerator) 
         and number of all messages to/from a person (denominator),
