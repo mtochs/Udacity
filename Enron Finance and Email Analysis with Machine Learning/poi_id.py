@@ -62,6 +62,8 @@ email_features = [
     ]
 features_list = poi_label + financial_features + email_features
 
+print "\n\n{} total features identified (not including 'poi'".format(len(features_list)-1)
+
 ### Load the dictionary containing the dataset
 with open("final_project_dataset.pkl", "r") as data_file:
     data_dict = pickle.load(data_file)
@@ -81,24 +83,28 @@ my_dataset = new_features.total_comp(my_dataset)
 """This section identifies the top 8 features in features_list and disregards
    all other features.  The classifier will proceed using the reduced
    features list below. """
-skb_features = enron_function.skb(data_dict, features_list, 8)
-features_list_SKB = poi_label + skb_features
-print "New Features List: ", features_list_SKB
+skb_features = enron_function.skb(data_dict, features_list, 6)
+features_list_final = poi_label + skb_features
+print "\n\nNew Features List: ", features_list_final
 
+total_nans = enron_function.find_nans(data_dict, features_list)
+print "\n\nTotal NaN's for all features:"
+for v,k in enumerate(total_nans):
+    print "* {} with {} NaN's".format(k, total_nans[k])
 
 ### Extract features and labels from dataset for local testing
-data = featureFormat(my_dataset, features_list_SKB, sort_keys=True)
+data = featureFormat(my_dataset, features_list_final, sort_keys=True)
 labels, features = targetFeatureSplit(data)
-
-"""Feature scaling with MinMaxScaler """
-scaler = preprocessing.MinMaxScaler()
-features = scaler.fit_transform(features)
 
 """Task 4: Try a varity of classifiers """
 clf_gaussian = GaussianNB()
+
+"""Feature scaling with MinMaxScaler """
+#scaler = preprocessing.MinMaxScaler()
+#features = scaler.fit_transform(features)
 clf_svc = SVC(kernel='rbf', C=1000)
 
-clf = clf_svc
+clf = clf_gaussian
 
 """Task 5: Tune classifier to achieve better than .3 precision and recall 
    using our testing script. Check the tester.py script in the final project
@@ -106,8 +112,8 @@ clf = clf_svc
    function. Because of the small size of the dataset, the script uses
    stratified shuffle split cross validation. For more info: 
    http://scikit-learn.org/stable/modules/generated/sklearn.cross_validation.StratifiedShuffleSplit.html """
-accuracy, precision, recall = enron_function.clf_stats(clf, features, labels, 1000)
-print "Accuracy score: ", accuracy
+accuracy, precision, recall = enron_function.clf_stats(clf, features, labels)
+print "\n\nAccuracy score: ", accuracy
 print "Precision: ", precision
 print "Recall: ", recall
 
