@@ -125,7 +125,7 @@ clf = clf_gaussian
    function. Because of the small size of the dataset, the script uses
    stratified shuffle split cross validation. For more info: 
    http://scikit-learn.org/stable/modules/generated/sklearn.cross_validation.StratifiedShuffleSplit.html """
-print "\n\n"
+print "\n"
 from tester import test_classifier 
 test_classifier(clf, my_dataset, features_list_final)
 
@@ -139,4 +139,4 @@ test_classifier(clf, my_dataset, features_list_final)
    check your results. You do not need to change anything below, but make sure
    that the version of poi_id.py that you submit can be run on its own and
    generates the necessary .pkl files for validating your results."""
-dump_classifier_and_data(clf, my_dataset, features_list)
+dump_classifier_and_data(clf, my_dataset, features_list_final)
