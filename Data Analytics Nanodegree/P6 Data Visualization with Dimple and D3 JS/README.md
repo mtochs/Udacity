@@ -1,13 +1,13 @@
 #Data Visualization of Titanic Survival Rates with Dimple and D3 JS
 **_Completed by Michael Ochs for Udacity Data Analytics Nanodegree_**
 
-##SUMMARY
+##Summary
 The data visualization in this project illustrates the survival rate of passengers of the Titanic.  The survival rates are separated by class then gender.  The purpose of the visualization is to give a brief yet deeper look into who had the greatest and least chance of survival.  Upon inspection, it's clear that females in first class had the highest chance of survival and men in third class had the least chance of survival.
 
-##DESIGN
+##Design
 
 
-##FEEDBACK
+##Feedback
 - **Colors**: One feedback mentioned that the colors are confusing and counterintuitive.  It's more commonly seen that male color is blue and female color is pink.  The pink might be too much of a contrast.  By default, male color was red and female color was blue.  Thus, the colors of red and blue were switched. 
 
 - **Opacity**: Version 2 of the graph had an opacity setting of 1.  This correlates to no transparency.  Observes did not like it.  The complaint was that it made it harder to see where the bar chart fits against the axis.  Opacity was later adjusted to .7 (or 70%).
