@@ -6,6 +6,7 @@ The data visualization in this project illustrates the survival rate of passenge
 
 ##Design
 
+![alt tag](https://github.com/mtochs/Udacity/tree/master/Data%20Analytics%20Nanodegree/P6%20Data%20Visualization%20with%20Dimple%20and%20D3%20JS/py_graph.png)
 
 ##Feedback
 - **Colors**: One feedback mentioned that the colors are confusing and counterintuitive.  It's more commonly seen that male color is blue and female color is pink.  The pink might be too much of a contrast.  By default, male color was red and female color was blue.  Thus, the colors of red and blue were switched. 
@@ -18,7 +19,7 @@ The data visualization in this project illustrates the survival rate of passenge
 
 - **Axis Titles**: The first versions did not have any titles.  It was suggested that the x and y axis are renamed to more intuitive names.  It was also recommended to create a title for the overall visualization.
 
-##RESOURCES
+##Resources
 Data visualization framework provided by:
 http://dimplejs.org/examples_viewer.html?id=bars_vertical_grouped
 
