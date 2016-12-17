@@ -17,13 +17,8 @@
                 myChart.addMeasureAxis("y", "Survived");
                 myChart.addSeries("Sex", dimple.plot.bar);
                 myChart.addLegend(65, 10, 510, 20, "right");
-                
-                //x.addOrderRule("Pclass", true);
-                //x.title("Passenger Class Split by Gender");
-                //y.title("Survival Rate (%)");
-
-                myChart.assignColor("male", "#80B1D3", "#80B1D3", ".7");
-                myChart.assignColor("female", "#FB8072", "#FB8072", ".7");
+                myChart.assignColor("male", "#80B1D3", "#80B1D3", "1");
+                myChart.assignColor("female", "#FB8072", "#FB8072", "1");
                 myChart.draw();
             });
             d3.selectAll("rect").append("rect")
