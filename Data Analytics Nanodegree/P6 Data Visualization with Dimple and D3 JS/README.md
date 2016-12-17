@@ -1,5 +1,5 @@
 #Data Visualization of Titanic Survival Rates with Dimple and D3 JS
-**Completed by Michael Ochs for Udacity Data Analytics Nanodegree**
+**_Completed by Michael Ochs for Udacity Data Analytics Nanodegree_**
 
 ##SUMMARY
 The data visualization in this project illustrates the survival rate of passengers of the Titanic.  The survival rates are separated by class then gender.  The purpose of the visualization is to give a brief yet deeper look into who had the greatest and least chance of survival.  Upon inspection, it's clear that females in first class had the highest chance of survival and men in third class had the least chance of survival.
