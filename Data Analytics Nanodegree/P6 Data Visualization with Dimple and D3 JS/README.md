@@ -7,8 +7,8 @@ The data visualization in this project illustrates the survival rate of passenge
 ##Design
 The purpose of this visualization was to provide a quick reference for factors that correlated with Titanic passenger survival rates.  An analysis of the data was done previously where many factors were analyzed.  The correlation of survival rate with factors such as age, departure port, etc. were investigated.  The variables with the greatest correlation to survival rate were gender and passenger class.  Thus, this visualization encompasses those key variables for the viewer.
 
-The design of this data visualization was modeled after the image below.  The image was mocked up in iPython notebook from the Titanic data.  The visual shows the survival rates of male and female passengers split by passenger class.
-![alt tag](https://github.com/mtochs/Udacity/blob/master/Data%20Analytics%20Nanodegree/P6%20Data%20Visualization%20with%20Dimple%20and%20D3%20JS/py_chart.png "Original chart from ipython notebook")
+The design of this data visualization was modeled after an image generated in iPython notebook using the Titanic data.  The visual shows the survival rates of male and female passengers split by passenger class.
+
 
 ##Feedback
 - **Colors**: One feedback mentioned that the colors are confusing and counterintuitive.  It's more commonly seen that male color is blue and female color is pink.  The pink might be too much of a contrast.  By default, male color was red and female color was blue.  Thus, the colors of red and blue were switched. 
