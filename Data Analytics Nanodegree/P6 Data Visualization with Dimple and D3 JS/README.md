@@ -11,15 +11,17 @@ The design of this data visualization was modeled after an image generated in iP
 
 
 ##Feedback
-- **Colors**: One feedback mentioned that the colors are confusing and counterintuitive.  It's more commonly seen that male color is blue and female color is pink.  The pink might be too much of a contrast.  By default, male color was red and female color was blue.  Thus, the colors of red and blue were switched. 
+This section includes all the feedback obtained from 3 individuals: persons A, B, and C.  Their feedback is included in parenthesis next to the subject in bold.
 
-- **Opacity**: Version 2 of the graph had an opacity setting of 1.  This correlates to no transparency.  Observes did not like it.  The complaint was that it made it harder to see where the bar chart fits against the axis.  Opacity was later adjusted to .7 (or 70%).
+- **Colors** (A): One feedback mentioned that the colors are confusing and counterintuitive.  It's more commonly seen that male color is blue and female color is pink.  The pink might be too much of a contrast.  By default, male color was red and female color was blue.  Thus, the colors of red and blue were switched. 
 
-- **Age**: A suggestion was to split the data by age.  This suggestion was declined since it would add more clutter to the visualization.  As a result, it might take away from the emphasis that class had on survival.  Furthermore, there was a relatively small number of children in the data. Of the total 891 data points, 177 did not have age and 133 were less than 18 (i.e. 17 or younger).  In other words, only 12.7% of the data was of children. 
+- **Opacity** (B, C): Version 2 of the graph had an opacity setting of 1.  This correlates to no transparency.  Observes did not like it.  The complaint was that it made it harder to see where the bar chart fits against the axis.  Opacity was later adjusted to .7 (or 70%).
 
-- **Data Order**: The first version did not have the classes in numerical order.  Class should be shown sequentially as 1, 2, 3.  In version 1 it was displayed as 1, 3, 2.  This critique was used to update the visualization to provide a clearer understanding on how passenger class correlated to survival rate.
+- **Age** (B): A suggestion was to split the data by age.  This suggestion was declined since it would add more clutter to the visualization.  As a result, it might take away from the emphasis that class had on survival.  Furthermore, there was a relatively small number of children in the data. Of the total 891 data points, 177 did not have age and 133 were less than 18 (i.e. 17 or younger).  In other words, only 12.7% of the data was of children. 
 
-- **Axis Titles**: The first versions did not have any titles.  It was suggested that the x and y axis are renamed to more intuitive names.  It was also recommended to create a title for the overall visualization.
+- **Data Order** (A, B, C): The first version did not have the classes in numerical order.  Class should be shown sequentially as 1, 2, 3.  In version 1 it was displayed as 1, 3, 2.  This critique was used to update the visualization to provide a clearer understanding on how passenger class correlated to survival rate.
+
+- **Axis Titles** (A, B, C): The first versions did not have any titles.  It was suggested that the x and y axis are renamed to more intuitive names.  It was also recommended to create a title for the overall visualization.
 
 ##Resources
 Data visualization framework provided by:
