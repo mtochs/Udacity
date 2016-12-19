@@ -28,8 +28,11 @@ This section includes all the feedback obtained from 3 individuals: persons A, B
 - **Axis Titles** (A, B, C): The first versions did not have any titles.  It was suggested that the x and y axis are renamed to more intuitive names.  It was also recommended to create a title for the overall visualization.
 
 ##Resources
-Data visualization framework provided by:
+Initial data visualization framework provided by:
 http://dimplejs.org/examples_viewer.html?id=bars_vertical_grouped
+
+Final data visualization framework:
+http://dimplejs.org/advanced_examples_viewer.html?id=advanced_bar_labels
 
 Huge thank you to Myles Callan!!  Myles timeliness and thorough responses on the Udacity forum have been a huge help and guide in completing this project.
 https://discussions.udacity.com/t/final-project-start/203226

@@ -1,0 +1,7 @@
+Class,Gender,Survived,Not_Survived,Total
+1,male,45,77,122
+1,female,91,3,94
+2,male,17,91,108
+2,female,70,6,76
+3,male,47,300,347
+3,female,72,72,144

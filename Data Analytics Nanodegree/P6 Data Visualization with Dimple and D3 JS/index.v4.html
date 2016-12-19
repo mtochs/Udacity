@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script src="http://d3js.org/d3.v3.min.js"></script>
+        <script src="http://dimplejs.org/dist/dimple.v2.2.0.min.js"></script>
+    </head>
+    <body>
+        <!-- Visible Content and scripts -->
+        <div id="chartContainer"></div>
+        <script type="text/javascript">
+            var svg = dimple.newSvg("#chartContainer", 590, 420);
+            d3.csv("titanic_data.csv", function(data) {
+
+                var myChart = new dimple.chart(svg, data);
+                myChart.setBounds(60, 30, 510, 330)
+                
+                // Setting elements from data to for x axis
+                var x = myChart.addCategoryAxis("x", ["Pclass", "Sex"]);
+                x.title ="Passenger Class Split by Gender";
+                // Change order of gender and iterate class accurately
+                x.addGroupOrderRule(["male", "female"]);
+                x.addOrderRule(["1", "2", "3"]);
+
+                // Setting element for y axis
+                var y = myChart.addMeasureAxis("y", "Survived_B");
+                y.title = "Survival Rate (%)";
+
+                myChart.addSeries("Sex", dimple.plot.bar);
+
+                // Set colors for genders
+                myChart.assignColor("male", "#80B1D3", "#80B1D3", ".7");
+                myChart.assignColor("female", "#FB8072", "#FB8072", ".7");
+
+                // Add legend to top right.
+                myChart.addLegend(65, 42, 510, 20, "right");
+                
+                //x.addOrderRule("Pclass", true);
+                myChart.draw();
+            });
+
+            // Make title for chart
+            svg.append("text")
+                .attr("x", (590 / 2))
+                .attr("y", 18)
+                .attr("text-anchor", "middle")
+                .style("font-family", "sans-serif")
+                .style("font-size", "18px")
+                //.style("font-weight", "bold")
+                .text("Surviving the Titanic: Rich Had Greatest Chance");
+        </script>
+    </body>
+</html>
