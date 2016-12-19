@@ -14,6 +14,10 @@ The design of this data visualization was modeled after an image generated in iP
 
 ![alt tag](https://github.com/mtochs/Udacity/blob/master/Data%20Analytics%20Nanodegree/P6%20Data%20Visualization%20with%20Dimple%20and%20D3%20JS/py_chart.png "Original chart from ipython notebook")
 
+![alt tag](https://github.com/mtochs/Udacity/blob/master/Data%20Analytics%20Nanodegree/P6%20Data%20Visualization%20with%20Dimple%20and%20D3%20JS/d3_graph_v1.png "Initial Version of Titanic Data Visualization")
+
+![alt tag](https://github.com/mtochs/Udacity/blob/master/Data%20Analytics%20Nanodegree/P6%20Data%20Visualization%20with%20Dimple%20and%20D3%20JS/d3_graph_v2.png "Final Version of Titanic Data Visualization")
+
 ##Feedback
 This section includes all the feedback obtained from 3 individuals: persons A, B, and C.  Their feedback is included in parenthesis next to the subject in bold.
 

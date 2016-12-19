@@ -13,9 +13,7 @@
         // This is the simple vertical grouped stacked 100% bar example
         var svg = dimple.newSvg("#chartContainer", 590, 400);
         d3.csv("titanic_data.csv", function(data) {
-            data.forEach(function(d){
-                d.Count = +1;
-            });
+
             var myChart = new dimple.chart(svg, data);
             myChart.setBounds(65, 45, 505, 315)
 
@@ -27,7 +25,7 @@
             x.addOrderRule(["1", "2", "3"]);
 
             // Setting element for y axis
-            var y = myChart.addPctAxis("y", "Count");
+            var y = myChart.addPctAxis("y", "PassengerId");
             y.title = "Survival Rates (%)";
 
             var s = myChart.addSeries("Survived", dimple.plot.bar);
@@ -36,6 +34,7 @@
             // draws (e.g. myChart.draw(1000)) or storyboards (though an onTick callback should
             // also be used to clear the text from the previous frame)
             s.afterDraw = function (shape, data) {
+                
                 // Get the shape as a d3 selection
                 var s = d3.select(shape),
                     rect = {
