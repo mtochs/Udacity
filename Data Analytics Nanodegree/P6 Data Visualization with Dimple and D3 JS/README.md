@@ -5,7 +5,7 @@
 The data visualization in this project illustrates the survival rate of passengers of the Titanic.  The survival rates are separated by class then gender.  The purpose of the visualization is to give a brief yet deeper look into who had the greatest and least chance of survival.  Upon inspection, it's clear that females in first class had the highest chance of survival and men in third class had the least chance of survival.
 
 ##Observation
-The title "Surviving the Titanic: Rich Had Greatest Chance" emphasises that the rich--or first class passengers--had the greatest percentage chance of surviving the Titanic disaster.  
+The title "Surviving the Titanic: Rich Had Greatest Chance" emphasises that the rich--or first class passengers--had the greatest percentage chance of surviving the Titanic disaster.  The survival percentages decrease with the class.  Third class passengers had the lowest survival percentages for males and females.
 
 ##Design
 The purpose of this visualization was to provide a quick reference for factors that correlated with Titanic passenger survival rates.  An analysis of the data was done previously where many factors were analyzed.  The correlation of survival rate with factors such as age, departure port, etc. were investigated.  The variables with the greatest correlation to survival rate were gender and passenger class.  Thus, this visualization encompasses those key variables for the viewer.
@@ -22,7 +22,7 @@ Figure 2 shows the first attempt at a data visualization chart.
 #####Figure 2: Initial version of Titanic Data visualization
 
 
-Figure 3 is the final layout that was used for the data visualization project.  This was 
+Figure 3 is the final layout that was used for the data visualization project.  This visual was the final template used for the project.
 
 ![alt tag](https://github.com/mtochs/Udacity/blob/master/Data%20Analytics%20Nanodegree/P6%20Data%20Visualization%20with%20Dimple%20and%20D3%20JS/d3_graph_v2.png "Final Version of Titanic Data Visualization")
 #####Figure 3: Final version of Titanic data visualization
