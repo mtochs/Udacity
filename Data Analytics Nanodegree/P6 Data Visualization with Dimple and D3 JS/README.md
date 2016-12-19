@@ -4,11 +4,14 @@
 ##Summary
 The data visualization in this project illustrates the survival rate of passengers of the Titanic.  The survival rates are separated by class then gender.  The purpose of the visualization is to give a brief yet deeper look into who had the greatest and least chance of survival.  Upon inspection, it's clear that females in first class had the highest chance of survival and men in third class had the least chance of survival.
 
+##Observation
+The title "Surviving the Titanic: Rich Had Greatest Chance" emphasises that the rich--or first class passengers--had the greatest percentage chance of surviving the Titanic disaster.  
+
 ##Design
 The purpose of this visualization was to provide a quick reference for factors that correlated with Titanic passenger survival rates.  An analysis of the data was done previously where many factors were analyzed.  The correlation of survival rate with factors such as age, departure port, etc. were investigated.  The variables with the greatest correlation to survival rate were gender and passenger class.  Thus, this visualization encompasses those key variables for the viewer.
 
-The design of this data visualization was modeled after an image generated in iPython notebook using the Titanic data.  The visual shows the survival rates of male and female passengers split by passenger class.
-
+The design of this data visualization was modeled after an image generated in iPython notebook using the Titanic data.  The visual shows the survival rates of male and female passengers split by passenger class.  This is the original chart from which the dimple chart is modeled:
+![alt tag](https://github.com/mtochs/Udacity/blob/master/Data%20Analytics%20Nanodegree/P6%20Data%20Visualization%20with%20Dimple%20and%20D3%20JS/py_chart.png "Original chart from ipython notebook")
 
 ##Feedback
 This section includes all the feedback obtained from 3 individuals: persons A, B, and C.  Their feedback is included in parenthesis next to the subject in bold.
