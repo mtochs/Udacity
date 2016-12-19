@@ -25,6 +25,7 @@ Figure 2 shows the first attempt at a data visualization chart.
 Figure 3 is the final layout that was used for the data visualization project.  This was 
 
 ![alt tag](https://github.com/mtochs/Udacity/blob/master/Data%20Analytics%20Nanodegree/P6%20Data%20Visualization%20with%20Dimple%20and%20D3%20JS/d3_graph_v2.png "Final Version of Titanic Data Visualization")
+#####Figure 3: Final version of Titanic data visualization
 
 ##Feedback
 This section includes all the feedback obtained from 3 individuals: persons A, B, and C.  Their feedback is included in parenthesis next to the subject in bold.
