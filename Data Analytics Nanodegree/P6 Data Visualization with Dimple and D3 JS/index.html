@@ -25,12 +25,12 @@
             // Change order of gender and iterate class accurately
             x.addGroupOrderRule(["male", "female"]);
             x.addOrderRule(["1", "2", "3"]);
-
-            // Setting element for y axis
+            
             var y = myChart.addPctAxis("y", "Count");
             y.title = "Survival Rates (%)";
 
             var s = myChart.addSeries("Survived", dimple.plot.bar);
+            s.addOrderRule(["Lived", "Died"]);
 
             // Using the afterDraw callback means this code still works with animated
             // draws (e.g. myChart.draw(1000)) or storyboards (though an onTick callback should
