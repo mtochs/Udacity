@@ -33,6 +33,7 @@ The unit of diversion is a cookie, although if the student enrolls in the free t
 Analytics estimates for standard deviation given a sample size of 5000 page-view cookies as follows:
 - **Gross Conversion:** 0.202
 - **Net conversion:** 0.0156
+
 Gross Conversion and Net Conversion are both a factor of the number of cookies (i.e. the unit of diversion).  Thus, analytical estimates of variance can be used.
 
 ##Sizing
