@@ -61,6 +61,7 @@ Using 40,000 for unique cookies per day we would need the following days for eac
 - 100% diverted would need 18 days
 - 80% diverted would need 22 days
 - 50% diverted would need 35 days
+
 #####Note: all "day" values are rounded up.
 
 A diverted percentage of 80% was used for this experiment.  The experiment does not appear to be a huge factor to user satisfaction.  Thus, we feel confident that diverting a higher number should not pose any significant impacts to Udacity.  Diverting 80% seems reasonable since the data could be collected inside of a month.  That would allow this experiment to be executed multiple times in a year if seasonality might be a factor for future experiments.
