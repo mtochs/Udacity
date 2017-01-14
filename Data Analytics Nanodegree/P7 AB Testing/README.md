@@ -37,10 +37,43 @@ Analytics estimates for standard deviation given a sample size of 5000 page-view
 Gross Conversion and Net Conversion are both a factor of the number of cookies (i.e. the unit of diversion).  Thus, analytical estimates of variance can be used.
 
 ##Sizing
+
+Project baseline values:
+- Unique cookies to view page per day: 40000
+- Unique cookies to click "Start free trial" per day: 3200
+- Enrollments per day: 660
+- Click-through-probability on "Start free trial": 0.08
+- Probability of enrolling, given click: 0.20625
+- Probability of payment, given enroll: 0.53
+- Probability of payment, given click: 0.1093125
 #####Note: Bonferroni correction not used
+
+###Choosing Number of Samples Given Power
+Total pageviews needed to collect to adequately power the experiment using alpha=0.05 and beta=0.2:
+- **Gross Conversion:** 645,875
+- **Net conversion:** 685,325
+
+Based on this we need a total pageview of 685,325.
+
+###Duration vs. Exposure
+Using 40,000 for unique cookies per day we would need the following days for each percentage of diversion:
+- 100% diverted would need 18 days
+- 80% diverted would need 22 days
+- 50% diverted would need 35 days
+#####Note: all "day" values are rounded up.
+
+A diverted percentage of 80% was used for this experiment.  The experiment does not appear to be a huge factor to user satisfaction.  Thus, we feel confident that diverting a higher number should not pose any significant impacts to Udacity.  Diverting 80% seems reasonable since the data could be collected inside of a month.  That would allow this experiment to be executed multiple times in a year if seasonality might be a factor for future experiments.
+
+##Experiment Analysis
+###Sanity Checks
+
+
+
+
 
 
 ##Resources
 Udacity A/B Test Final Project Instructions provided by:
 https://docs.google.com/document/u/0/d/1aCquhIqsUApgsxQ8-SQBAigFDcfWVVohLEXcV6jWbdI/pub?embedded=True
 
+https://docs.google.com/spreadsheets/d/1Mu5u9GrybDdska-ljPXyBjTpdZIUev_6i7t4LRDfXM8/edit#gid=0
