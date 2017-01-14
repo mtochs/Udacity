@@ -78,7 +78,16 @@ Below are the values expected to be observed, the actual observed value, and whe
 | Number of Clicks | 0.5000 | 0.5005 | 0.4959 | 0.5041 | Yes |
 | Click-through-probability | 0.0821 | 0.0822 | 0.0812 | 0.0830 | Yes |
 
+###Result Analysis
+####Effect Size Tests
 
+####Sign Tests
+
+####Summary
+
+###Recommendation
+
+##Follow-Up Experiment
 
 
 
