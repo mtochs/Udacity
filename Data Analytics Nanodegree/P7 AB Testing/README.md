@@ -75,20 +75,25 @@ Below are the values expected to be observed, the actual observed value, and whe
 | Metric | Expected | Observed | CI Lower | CI Upper | Pass? |
 | ------ | -------- | -------- | -------- | -------- | ----- |
 | Number of Cookies | 0.5000 | 0.5006 | 0.4988 | 0.5012 | Yes |
-| Number of Clicks | 0.5000 | 0.5005 | 0.4959 | 0.5041 | Yes |
+| Number of Clicks | 0.5000 | 0.5005 | 0.4959 | 0.5042 | Yes |
 | Click-through-probability | 0.0821 | 0.0822 | 0.0812 | 0.0830 | Yes |
 
 ###Result Analysis
 ####Effect Size Tests
-Below are the differences between the experiment and control groups.  A 95% confidence interval (CI) is used.  It is indicated whether each metric is statistically (SS) and practically (PS) significant.
+Below are the differences between the experiment and control groups for the evaluation metrics.  A 95% confidence interval (CI) is used.  It is indicated whether each metric is statistically (SS) and practically (PS) significant.
 
 | Metric | Difference | CI Lower | CI Upper | SS | PS |
 | ------ | ---------- | -------- | -------- | --- | --- |
 | Gross Conversion | -0.0205 | -.0291 | -.0120 | X | X |
 | Net Conversion | -0.0048 | -0.0116 | 0.0019 |   |   |
 
-
 ####Sign Tests
+Below are the values from a sign test using the day-by-day data. The p-value of the sign test are included.  It is indicated if the evaluation metrics is statistically significant (SS).
+
+| Metric | P-Value | SS |
+| ------ | ------- | --- |
+| Gross Conversion | 0.0026 | X |
+| Net Conversion | 0.6776 |   |
 
 ####Summary
 
