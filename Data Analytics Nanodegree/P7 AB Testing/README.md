@@ -72,10 +72,10 @@ Diverting 80% seems reasonable since the data could be collected inside of a mon
 ###Sanity Checks
 Below are the values expected to be observed, the actual observed value, and whether the metric passes a sanity check using a 95% confidence interval (CI).
 
-| Metric | Expected Value | Observed Value | CI Lower | CI Upper | Pass? |
+| Metric | Expected | Observed | CI Lower | CI Upper | Pass? |
 | ------ | -------------- | -------------- | -------- | -------- | ----- |
 | Number of Cookies | 0.5000 | 0.5006 | 0.4988 | 0.5012 | Yes |
-| Number of Clicks | 0.5000 | 0.5005 | 0.4959 | 0.5042 | Yes |
+| Number of Clicks | 0.5000 | 0.5005 | 0.4959 | 0.5041 | Yes |
 | Click-through-probability | 0.0821 | 0.0822 | 0.0812 | 0.0830 | Yes |
 
 
