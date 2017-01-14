@@ -29,6 +29,15 @@ The unit of diversion is a cookie, although if the student enrolls in the free t
 ###Unused Metric
 - **Number of user-ids d<sub>min</sub>=50):** That is, number of users who enroll in the free trial.  This is not a suitable invariant metric since a user must enroll in order to be tallied.  It also would not necessarily change due to the free trial screener for many reasons.  For example, there can be many user-ids per person.
 
+##Measuring Standard Deviation
+###Analytics estimates for standard deviation given a sample size of 5000 page-view cookies as follows:
+- **Gross Conversion:** 0.202
+- **Retention:** 0.0549
+- **Net conversion:** 0.0156
+
+
+
+
 ##Resources
 Udacity A/B Test Final Project Instructions provided by:
 https://docs.google.com/document/u/0/d/1aCquhIqsUApgsxQ8-SQBAigFDcfWVVohLEXcV6jWbdI/pub?embedded=True
