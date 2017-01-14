@@ -64,7 +64,9 @@ Using 40,000 for unique cookies per day we would need the following days for eac
 
 #####Note: all "day" values are rounded up.
 
-A diverted percentage of 80% was used for this experiment.  The experiment does not appear to be a huge factor to user satisfaction.  Thus, we feel confident that diverting a higher number should not pose any significant impacts to Udacity.  Diverting 80% seems reasonable since the data could be collected inside of a month.  That would allow this experiment to be executed multiple times in a year if seasonality might be a factor for future experiments.
+A diverted percentage of 80% was used for this experiment.  The experiment does not appear to be a huge factor to user satisfaction.  Thus, we feel confident that diverting a higher number should not pose any significant impacts to Udacity.  Nevertheless, there could be issues with coding, etc.  So, we would not want to divert 100% in the event of a web coding bug that might reduce customer experience.
+
+Diverting 80% seems reasonable since the data could be collected inside of a month.  That would allow this experiment to be executed multiple times in a year if seasonality might be a factor for future experiments.
 
 ##Experiment Analysis
 ###Sanity Checks
