@@ -22,20 +22,20 @@ The unit of diversion is a cookie, although if the student enrolls in the free t
 ###Choosing Evaluation Metrics
 - **Gross Conversion (d<sub>min</sub>=0.01):** Illustrates the number of user-ids to complete checkout and enroll in the free trial divided by number of unique cookies to click the "Start free trial" button.  This is a good choice for an evaluation metric since it's directly affected by clicking on "start free trial".  Thus, the number is affected by the free trial screener question.
 
-- **Retention (d<sub>min</sub>=0.01):** This is the number of user-ids to remain enrolled past the 14-day boundary--and thus make at least one payment--divided by number of user-ids to complete checkout.  This metric is also affected by the free trial screener question.  If the hypothesis is correct, we should see a difference in retention of the control and experiement groups.
-
-- **Net conversion (d<sub>min</sub>=0.0075):** This number is the user-ids to remain enrolled past the 14-day boundary--and thus make at least one payment--divided by the number of unique cookies to click the "Start free trial" button.  If the free trial screener has an affect on retention, then this should also vary.
+- **Net conversion (d<sub>min</sub>=0.0075):** This number is the user-ids to remain enrolled past the 14-day boundary--and thus make at least one payment--divided by the number of unique cookies to click the "Start free trial" button.  If the hypothesis is correct, we should see a difference in retention of the control and experiement groups.
 
 ###Unused Metric
 - **Number of user-ids d<sub>min</sub>=50):** That is, number of users who enroll in the free trial.  This is not a suitable invariant metric since a user must enroll in order to be tallied.  It also would not necessarily change due to the free trial screener for many reasons.  For example, there can be many user-ids per person.
 
+- **Retention (d<sub>min</sub>=0.01):** This is the number of user-ids to remain enrolled past the 14-day boundary--and thus make at least one payment--divided by number of user-ids to complete checkout.  This metric is also affected by the free trial screener question.  This metric is not used since it is proportional to Net Conversion and Gross Conversion; however, it is not a factor of the unit of diversion.
+
 ##Measuring Standard Deviation
 Analytics estimates for standard deviation given a sample size of 5000 page-view cookies as follows:
 - **Gross Conversion:** 0.202
-- **Retention:** 0.0549
 - **Net conversion:** 0.0156
+Gross Conversion and Net Conversion are both a factor of the number of cookies (i.e. the unit of diversion).  Thus, analytical estimates of variance can be used.
 
-
+##Sizing
 
 
 ##Resources
