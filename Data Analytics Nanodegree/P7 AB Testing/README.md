@@ -85,7 +85,7 @@ Below are the differences between the experiment and control groups.  A 95% conf
 | Metric | Difference | CI Lower | CI Upper | SS | PS |
 | ------ | ---------- | -------- | -------- | -- | -- |
 | Gross Conversion | -0.0205 | -.0291 | -.0120 | X | X |
-| Net Conversion | -0.0048 | -0.0116 | 0.0019 | - | - |
+| Net Conversion | -0.0048 | -0.0116 | 0.0019 |   |   |
 
 
 ####Sign Tests
