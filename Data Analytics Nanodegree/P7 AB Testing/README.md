@@ -73,13 +73,20 @@ Diverting 80% seems reasonable since the data could be collected inside of a mon
 Below are the values expected to be observed, the actual observed value, and whether the metric passes a sanity check using a 95% confidence interval (CI).
 
 | Metric | Expected | Observed | CI Lower | CI Upper | Pass? |
-| ------ | -------------- | -------------- | -------- | -------- | ----- |
+| ------ | -------- | -------- | -------- | -------- | ----- |
 | Number of Cookies | 0.5000 | 0.5006 | 0.4988 | 0.5012 | Yes |
 | Number of Clicks | 0.5000 | 0.5005 | 0.4959 | 0.5041 | Yes |
 | Click-through-probability | 0.0821 | 0.0822 | 0.0812 | 0.0830 | Yes |
 
 ###Result Analysis
 ####Effect Size Tests
+Below are the differences between the experiment and control groups.  A 95% confidence interval (CI) is used.  It is indicated whether each metric is statistically (SS) and practically (PS) significant.
+
+| Metric | Difference | CI Lower | CI Upper | SS | PS |
+| ------ | ---------- | -------- | -------- | -- | -- |
+| Gross Conversion | -0.0205 | -.0291 | -.0120 | X | X |
+| Net Conversion | -0.0048 | -0.0116 | 0.0019 | - | - |
+
 
 ####Sign Tests
 
@@ -93,7 +100,8 @@ Below are the values expected to be observed, the actual observed value, and whe
 
 
 ##Resources
-Udacity A/B Test Final Project Instructions provided by:
+Udacity A/B Test Final Project Instructions:
 https://docs.google.com/document/u/0/d/1aCquhIqsUApgsxQ8-SQBAigFDcfWVVohLEXcV6jWbdI/pub?embedded=True
 
+Udacity A/B Test Data Set: 
 https://docs.google.com/spreadsheets/d/1Mu5u9GrybDdska-ljPXyBjTpdZIUev_6i7t4LRDfXM8/edit#gid=0
