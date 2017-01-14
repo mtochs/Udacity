@@ -37,6 +37,7 @@ Analytics estimates for standard deviation given a sample size of 5000 page-view
 Gross Conversion and Net Conversion are both a factor of the number of cookies (i.e. the unit of diversion).  Thus, analytical estimates of variance can be used.
 
 ##Sizing
+#####Note: Bonferroni correction not used
 
 
 ##Resources
