@@ -13,18 +13,21 @@ The unit of diversion is a cookie, although if the student enrolls in the free t
 ##Metric Choice
 
 ###Choosing Invariant Metrics
-- **Number of cookies (d<sub>min</sub>=3000):** 
+- **Number of cookies (d<sub>min</sub>=3000):** This is the number of unique cookies to view the course overview page.  Thus, it should not vary between control and experiment groups.  The number is tallied before the user clicks anything beyond the course overview.
 
-- **Number of clicks (d<sub>min</sub>=240):** 
+- **Number of clicks (d<sub>min</sub>=240):** This is the number of unique cookies to click the "Start free trial" button which happens before the free trial screener is triggered.  This metric should also be evenly distributed amongst the control and groups since the free trial screener has not yet triggered.
 
-- **Click-through-probability (d<sub>min</sub>=0.01):** 
+- **Click-through-probability (d<sub>min</sub>=0.01):**  Defined as the number of unique cookies to click the "Start free trial" button divided by number of unique cookies to view the course overview page.
 
 ###Choosing Evaluation Metrics
-- **Gross Conversion (d<sub>min</sub>=0.01):** 
+- **Gross Conversion (d<sub>min</sub>=0.01):** Illustrates the number of user-ids to complete checkout and enroll in the free trial divided by number of unique cookies to click the "Start free trial" button.
 
-- **Retention (d<sub>min</sub>=0.01):** 
+- **Retention (d<sub>min</sub>=0.01):** This is the number of user-ids to remain enrolled past the 14-day boundary--and thus make at least one payment--divided by number of user-ids to complete checkout.
 
-- **Net conversion (d<sub>min</sub>=0.0075):** 
+- **Net conversion (d<sub>min</sub>=0.0075):** This number is the user-ids to remain enrolled past the 14-day boundary--and thus make at least one payment--divided by the number of unique cookies to click the "Start free trial" button.
+
+###Unused Metric
+- **Number of user-ids d<sub>min</sub>=50):** That is, number of users who enroll in the free trial.  This is not a suitable invariant metric since a user must enroll in order to be tallied.
 
 ##Resources
 Udacity A/B Test Final Project Instructions provided by:
