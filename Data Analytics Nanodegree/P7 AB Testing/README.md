@@ -83,7 +83,7 @@ Below are the values expected to be observed, the actual observed value, and whe
 Below are the differences between the experiment and control groups.  A 95% confidence interval (CI) is used.  It is indicated whether each metric is statistically (SS) and practically (PS) significant.
 
 | Metric | Difference | CI Lower | CI Upper | SS | PS |
-| ------ | ---------- | -------- | -------- | -- | -- |
+| ------ | ---------- | -------- | -------- | --- | --- |
 | Gross Conversion | -0.0205 | -.0291 | -.0120 | X | X |
 | Net Conversion | -0.0048 | -0.0116 | 0.0019 |   |   |
 
