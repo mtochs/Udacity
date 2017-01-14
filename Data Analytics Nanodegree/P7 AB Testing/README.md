@@ -13,11 +13,11 @@ The unit of diversion is a cookie, although if the student enrolls in the free t
 ##Metric Choice
 
 ###Choosing Invariant Metrics
-- **Number of cookies:**
+- **Number of cookies (d<sub>min</sub>=3000):** 
 
 - **Number of clicks:** 
 
-- Click-through-probability:**
+- **Click-through-probability:** 
 
 ###Choosing Evaluation Metrics
 - **Gross Conversion:** 
