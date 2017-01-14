@@ -46,6 +46,7 @@ Project baseline values:
 - Probability of enrolling, given click: 0.20625
 - Probability of payment, given enroll: 0.53
 - Probability of payment, given click: 0.1093125
+
 #####Note: Bonferroni correction not used
 
 ###Choosing Number of Samples Given Power
