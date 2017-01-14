@@ -17,7 +17,7 @@ The unit of diversion is a cookie, although if the student enrolls in the free t
 
 - **Number of clicks (d<sub>min</sub>=240):** This is the number of unique cookies to click the "Start free trial" button which happens before the free trial screener is triggered.  This metric should also be evenly distributed amongst the control and groups since the free trial screener has not yet triggered.
 
-- **Click-through-probability (d<sub>min</sub>=0.01):**  Defined as the number of unique cookies to click the "Start free trial" button divided by number of unique cookies to view the course overview page.
+- **Click-through-probability (d<sub>min</sub>=0.01):**  Defined as the number of unique cookies to click the "Start free trial" button divided by number of unique cookies to view the course overview page.  This is essentially a division of the above metrics.  Thus, this should not be affected if the above metrics are not affected.
 
 ###Choosing Evaluation Metrics
 - **Gross Conversion (d<sub>min</sub>=0.01):** Illustrates the number of user-ids to complete checkout and enroll in the free trial divided by number of unique cookies to click the "Start free trial" button.  This is a good choice for an evaluation metric since it's directly affected by clicking on "start free trial".  Thus, the number is affected by the free trial screener question.
