@@ -15,16 +15,16 @@ The unit of diversion is a cookie, although if the student enrolls in the free t
 ###Choosing Invariant Metrics
 - **Number of cookies (d<sub>min</sub>=3000):** 
 
-- **Number of clicks:** 
+- **Number of clicks (d<sub>min</sub>=240):** 
 
-- **Click-through-probability:** 
+- **Click-through-probability (d<sub>min</sub>=0.01):** 
 
 ###Choosing Evaluation Metrics
-- **Gross Conversion:** 
+- **Gross Conversion (d<sub>min</sub>=0.01):** 
 
-- **Retention:** 
+- **Retention (d<sub>min</sub>=0.01):** 
 
-- **Net conversion:** 
+- **Net conversion (d<sub>min</sub>=0.0075):** 
 
 ##Resources
 Udacity A/B Test Final Project Instructions provided by:
