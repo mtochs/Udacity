@@ -96,17 +96,39 @@ Below are the values from a sign test using the day-by-day data. The p-value of 
 | Net Conversion | 0.6776 |   |
 
 ####Summary
+A project was conducted with the focus on determining how setting clearer expectations might affect the number of frustrated students.  The hope is that this would boost student experience and improve coaches' capacity to support students.  This in turn would increase the number of students that completed the course.
+
+Three invariant metrics were used in the project: number of cookies, number of clicks, and click-through-probability.  The evaluation metrics used were gross conversion and net conversion.  In order for the hypothesis to be true--and the null to be rejected--all invariant metrics must have remained within a 95% confidence interval while simultaneously showing improvement in one or both evaluation metrics.
+
+All invariant metrics remained within a 95% confidence interval and gross conversion was shown to have a statistically and practially significant difference.  Net conversion did not show a statistically or practially significant difference.
+
+Bonferroni correction was not used for this project.  The Bonferroni correction is used for concerns on false positives.  If multiple comparisons are done or multiple hypotheses are tested, the chance of a rare event increases, and therefore, the likelihood of incorrectly rejecting a null hypothesis (i.e., making a Type I error) increases.[4]  Thus Bonferroni compensates for an increase in false positives.  This project does not utilize many invariant or evaluation metrics nor does have have multiple hypothesis.  It is for this reason that it was not incoporated into this project.
 
 ###Recommendation
+The null hypotheses is rejected since all invariant metrics remained in a 95% confidence interval while the gross conversion difference between the control and observed groups were shown to be statistically and practially significant.  It is for this reason we would suggest implementing this change.
+
+Furthermore the changes tested in this experiement were not highly invasive.  The changes should not create a significant--or perhaps even noticeable--change in student experience.  To say it another way: the gains outweigh the risks.
 
 ##Follow-Up Experiment
 
 
 
+Give a high-level description of the follow up experiment you would run, what your hypothesis would be, what metrics you would want to measure, what your unit of diversion would be, and your reasoning for these choices.
+
+
+
+
+
 
 ##Resources
-Udacity A/B Test Final Project Instructions:
+Udacity A/B Test Final Project Instructions: 
 https://docs.google.com/document/u/0/d/1aCquhIqsUApgsxQ8-SQBAigFDcfWVVohLEXcV6jWbdI/pub?embedded=True
+
+Udacity A/B Test Baseline Values: 
+https://docs.google.com/spreadsheets/d/1MYNUtC47Pg8hdoCjOXaHqF-thheGpUshrFA21BAJnNc/edit#gid=0
 
 Udacity A/B Test Data Set: 
 https://docs.google.com/spreadsheets/d/1Mu5u9GrybDdska-ljPXyBjTpdZIUev_6i7t4LRDfXM8/edit#gid=0
+
+[4] Wikipedia: Bonferroni correction 
+https://en.wikipedia.org/wiki/Bonferroni_correction
