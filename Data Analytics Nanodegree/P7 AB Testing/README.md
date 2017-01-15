@@ -110,10 +110,16 @@ The null hypotheses is rejected since all invariant metrics remained in a 95% co
 Furthermore the changes tested in this experiement were not highly invasive.  The changes should not create a significant--or perhaps even noticeable--change in student experience.  To say it another way: the gains outweigh the risks.
 
 ##Follow-Up Experiment
-A follow up experiement to further increase customer experience could be to have a coach reach out to
+A follow up experiement to further increase customer experience could be to have a coach message someone who has signed up but is not utilizing the web site.  The criteria would be people that signed up with a site utilization of less than 5 hours by the 7th day.  A dialogue window could pop up on the site to ask something simple like "how is the training going?  Do you need any help?"  The unit of diversion could be user-id to follow the users that fit the criteria of the project.  All users that signed up for the course would need a user-id.
 
+The hypotheses for this project is that intervention with users on the 7th day of the trial that have fallen below 5 hours of usage will increase student completion rates.  Students that are not using the site the recommended 5 hours per week may be more responsive to a simple line of communication from a coach.  At that point the student could respond with areas where they are struggling.  Thus, students would work to completion if those barriers are removed.
 
-Give a high-level description of the follow up experiment you would run, what your hypothesis would be, what metrics you would want to measure, what your unit of diversion would be, and your reasoning for these choices.
+The invariant metrics would be:
+- **Numbers of cookies:** The number of unique cookies that viewed the web site.  This number should not change if students receive a dialogue window inquiring about the course experience or not.
+- **Number of clicks:** The number of clicks before a dialogue window appears inquiring about course experience.  This number should also remain the same provided there are no other significant changes are being made to the web site.
+
+The evaluation metrics would be:
+- **Net conversion:** This number is the user-ids to remain enrolled past the 14-day boundary--and thus make at least one payment--divided by the number of unique cookies to click the "Start free trial" button.  This number should improve if the hypothesis is true.  The number of users to enroll past 14 days should increase if the inquiry dialogue improves customer experience.
 
 
 
