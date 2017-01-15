@@ -110,7 +110,7 @@ The null hypotheses is rejected since all invariant metrics remained in a 95% co
 Furthermore the changes tested in this experiement were not highly invasive.  The changes should not create a significant--or perhaps even noticeable--change in student experience.  To say it another way: the gains outweigh the risks.
 
 ##Follow-Up Experiment
-
+A follow up experiement to further increase customer experience could be to have a coach reach out to
 
 
 Give a high-level description of the follow up experiment you would run, what your hypothesis would be, what metrics you would want to measure, what your unit of diversion would be, and your reasoning for these choices.
@@ -121,13 +121,13 @@ Give a high-level description of the follow up experiment you would run, what yo
 
 
 ##Resources
-Udacity A/B Test Final Project Instructions: 
+[1] Udacity A/B Test Final Project Instructions: 
 https://docs.google.com/document/u/0/d/1aCquhIqsUApgsxQ8-SQBAigFDcfWVVohLEXcV6jWbdI/pub?embedded=True
 
-Udacity A/B Test Baseline Values: 
+[2] Udacity A/B Test Baseline Values: 
 https://docs.google.com/spreadsheets/d/1MYNUtC47Pg8hdoCjOXaHqF-thheGpUshrFA21BAJnNc/edit#gid=0
 
-Udacity A/B Test Data Set: 
+[3] Udacity A/B Test Data Set: 
 https://docs.google.com/spreadsheets/d/1Mu5u9GrybDdska-ljPXyBjTpdZIUev_6i7t4LRDfXM8/edit#gid=0
 
 [4] Wikipedia: Bonferroni correction 
