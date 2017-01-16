@@ -124,6 +124,7 @@ The invariant metrics would be:
 - **Number of user-ids:** That is, number of users who enroll in the free trial.  This number should remain the same for the control and experiment groups.
 
 The evaluation metrics would be:
+- **Retention (d<sub>min</sub>=0.01):** This is the number of user-ids to remain enrolled past the 14-day boundary--and thus make at least one payment--divided by number of user-ids to complete checkout.  This metric should show a difference if the follow-up experiment influences student experience.  For example, if the experiement improves student experience, there should be a positive difference in this metric.
 - **Net conversion:** This number is the user-ids to remain enrolled past the 14-day boundary--and thus make at least one payment--divided by the number of unique cookies to click the "Start free trial" button.  This number should improve if the hypothesis is true.  The number of users to enroll past 14 days should increase if the inquiry dialogue improves customer experience.
 
 ##Resources
