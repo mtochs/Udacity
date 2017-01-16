@@ -22,12 +22,15 @@ The unit of diversion is a cookie, although if the student enrolls in the free t
 ###Choosing Evaluation Metrics
 - **Gross Conversion (d<sub>min</sub>=0.01):** Illustrates the number of user-ids to complete checkout and enroll in the free trial divided by number of unique cookies to click the "Start free trial" button.  This is a good choice for an evaluation metric since it's directly affected by clicking on "start free trial".  Thus, the number is affected by the free trial screener question.
 
-- **Net conversion (d<sub>min</sub>=0.0075):** This number is the user-ids to remain enrolled past the 14-day boundary--and thus make at least one payment--divided by the number of unique cookies to click the "Start free trial" button.  If the hypothesis is correct, we should see a difference in retention of the control and experiement groups.
+- **Net conversion (d<sub>min</sub>=0.0075):** This number is the user-ids to remain enrolled past the 14-day boundary--and thus make at least one payment--divided by the number of unique cookies to click the "Start free trial" button.  If the hypothesis is correct, we should see a difference in retention of the control and experiment groups.
 
 ###Unused Metric
-- **Number of user-ids d<sub>min</sub>=50):** That is, number of users who enroll in the free trial.  This is not a suitable invariant metric since a user must enroll in order to be tallied.  It also would not necessarily change due to the free trial screener for many reasons.  For example, there can be many user-ids per person.
+- **Number of user-ids d<sub>min</sub>=50):** That is, number of users who enroll in the free trial.  This is not a suitable invariant metric since a user must enroll in order to be tallied.  The pre-trial screener question appears after clicking "Start Free Trial."  Some users may choose to not sign up in the experiment group.  Thus, we cannot assume the control and experiment groups will be the same quantity.
 
-- **Retention (d<sub>min</sub>=0.01):** This is the number of user-ids to remain enrolled past the 14-day boundary--and thus make at least one payment--divided by number of user-ids to complete checkout.  This metric is also affected by the free trial screener question.  This metric is not used since it is proportional to Net Conversion and Gross Conversion; however, it is not a factor of the unit of diversion.
+- **Retention (d<sub>min</sub>=0.01):** This is the number of user-ids to remain enrolled past the 14-day boundary--and thus make at least one payment--divided by number of user-ids to complete checkout.  This metric is also affected by the free trial screener question.  More importantly, it does not ensure that a student is completing the course work.  It merely tallies student enrolled 14 days or more.  We could have 90% of students dropping out at day 15 and this metric would be the same as if they completed the entire course.
+
+##Experiment Goal
+We require all invariant metrics to pass within a 95% confident interval while having a positive experiment-control difference of statistical and practical significance for both evaluation metrics in order to reject the null hypotheses.
 
 ##Measuring Standard Deviation
 Analytics estimates for standard deviation given a sample size of 5000 page-view cookies as follows:
@@ -64,9 +67,11 @@ Using 40,000 for unique cookies per day we would need the following days for eac
 
 #####Note: all "day" values are rounded up.
 
-A diverted percentage of 80% was used for this experiment.  The experiment does not appear to be a huge factor to user satisfaction.  Thus, we feel confident that diverting a higher number should not pose any significant impacts to Udacity.  Nevertheless, there could be issues with coding, etc.  So, we would not want to divert 100% in the event of a web coding bug that might reduce customer experience.
+A diverted percentage of 80% was used for this experiment.  The experiment does not appear to be a huge factor to user satisfaction or risk.  Thus, we feel confident that diverting a higher number should not pose any significant impacts to Udacity.
 
-Diverting 80% seems reasonable since the data could be collected inside of a month.  That would allow this experiment to be executed multiple times in a year if seasonality might be a factor for future experiments.
+This experiment does not incorporate any sensitive information (e.g. financial or medical information).  It does not pose any potential harm to users.  At worst case, it's a minor inconvenience of having one more click to sign up.  Thus, this experiment has low risk.
+
+There could be issues with coding, etc.  So, we would not want to divert 100% in the event of a web coding bug that might reduce customer experience.  Diverting 80% seems reasonable since the data could be collected inside of a month.  That would allow this experiment to be executed multiple times in a year if seasonality might be a factor for future experiments.
 
 ##Experiment Analysis
 ###Sanity Checks
@@ -102,17 +107,17 @@ Three invariant metrics were used in the project: number of cookies, number of c
 
 All invariant metrics remained within a 95% confidence interval and gross conversion was shown to have a statistically and practially significant difference.  Net conversion did not show a statistically or practially significant difference.
 
-Bonferroni correction was not used for this project.  The Bonferroni correction is used for concerns on false positives.  If multiple comparisons are done or multiple hypotheses are tested, the chance of a rare event increases, and therefore, the likelihood of incorrectly rejecting a null hypothesis (i.e., making a Type I error) increases.[4]  Thus Bonferroni compensates for an increase in false positives.  This project does not utilize many invariant or evaluation metrics nor does have have multiple hypothesis.  It is for this reason that it was not incoporated into this project.
+Bonferroni correction was not used for this project.  The Bonferroni correction is used for concerns on false positives.  If multiple comparisons are done or multiple hypotheses are tested, the chance of a rare event increases, and therefore, the likelihood of incorrectly rejecting a null hypothesis (i.e., making a Type I error) increases.[4]  Thus Bonferroni compensates for an increase in false positives.  Bonferroni is used in cases where all evaluation metrics show a significant difference between the control and experiment groups.  
+
+We did not use Bonferroni correction in this project since only one evaluation metric showed significance.  Furthermore, the evaluation metric results did not dispute one another.  Had we seen conflicting results (i.e. one evaluation metric shows improvement and another shows decline) the correction may have been appropriate.
 
 ###Recommendation
-The null hypotheses is rejected since all invariant metrics remained in a 95% confidence interval while the gross conversion difference between the control and observed groups were shown to be statistically and practially significant.  It is for this reason we would suggest implementing this change.
-
-Furthermore the changes tested in this experiement were not highly invasive.  The changes should not create a significant--or perhaps even noticeable--change in student experience.  To say it another way: the gains outweigh the risks.
+The null hypotheses is supported since all invariant metrics remained in a 95% confidence interval while only gross conversion showed a control-experiement difference of statistical and practial significance.  It is for this reason we would suggest not implementing the change.  The project did not create an improvement in net conversion.
 
 ##Follow-Up Experiment
-A follow up experiement to further increase customer experience could be to have a coach message someone who has signed up but is not utilizing the web site.  The criteria would be people that signed up with a site utilization of less than 5 hours by the 7th day.  A dialogue window could pop up on the site to ask something simple like "how is the training going?  Do you need any help?"  The unit of diversion could be user-id to follow the users that fit the criteria of the project.  All users that signed up for the course would need a user-id.
+A follow up experiment to further increase customer experience could be to have a message pop up for someone who has signed up but is not utilizing the web site.  The criteria would be people that signed up with a site utilization of less than 5 hours by the 7th day.  A dialogue window could pop up on the site to ask something simple like "how is the training going?  Do you need any help?"  The unit of diversion could be user-id to follow the users that fit the criteria of the project.  All users that signed up for the course would need a user-id.
 
-The hypotheses for this project is that intervention with users on the 7th day of the trial that have fallen below 5 hours of usage will increase student completion rates.  Students that are not using the site the recommended 5 hours per week may be more responsive to a simple line of communication from a coach.  At that point the student could respond with areas where they are struggling.  Thus, students would work to completion if those barriers are removed.
+The hypotheses for this project is that intervention with users on the 7th day of the trial that have fallen below 5 hours of usage will increase student completion rates.  Students that are not using the site the recommended 5 hours per week may be more responsive to a simple line of communication from the message dialogue.  At that point the student could respond with areas in which they are struggling.  The information would then be passed on to Udacity employees for evaluation and possible response.  Thus, students would work to completion if those barriers are removed.
 
 The invariant metrics would be:
 - **Numbers of cookies:** The number of unique cookies that viewed the web site.  This number should not change if students receive a dialogue window inquiring about the course experience or not.
