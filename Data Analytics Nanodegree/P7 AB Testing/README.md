@@ -113,7 +113,7 @@ Bonferroni correction was not used for this project.  The Bonferroni correction 
 We did not use Bonferroni correction in this project since only one evaluation metric showed significance.  Furthermore, the evaluation metric results did not dispute one another.  Had we seen conflicting results (i.e. one evaluation metric shows improvement and another shows decline) the correction may have been appropriate.
 
 ###Recommendation
-The null hypotheses is supported since all invariant metrics remained in a 95% confidence interval while only gross conversion showed a control-experiement difference of statistical and practial significance.  It is for this reason we would suggest not implementing the change.  The project did not create an improvement in net conversion.
+The null hypotheses is supported since all invariant metrics remained in a 95% confidence interval while only gross conversion showed a control-experiement difference of statistical and practial significance.  It is for this reason we would suggest not implementing the change.  Gross conversion was reduced while net conversion remained the same.  More people 
 
 ##Follow-Up Experiment
 A follow up experiment to further increase customer experience could be to have a message pop up for someone who has signed up but is not utilizing the web site.  The criteria would be people that signed up with a site utilization of less than 5 hours by the 7th day.  A dialogue window could pop up on the site to ask something simple like "how is the training going?  Do you need any help?"  The unit of diversion could be user-id to follow the users that fit the criteria of the project.  All users that signed up for the course would need a user-id.
@@ -121,8 +121,7 @@ A follow up experiment to further increase customer experience could be to have 
 The hypotheses for this project is that intervention with users on the 7th day of the trial that have fallen below 5 hours of usage will increase student completion rates.  Students that are not using the site the recommended 5 hours per week may be more responsive to a simple line of communication from the message dialogue.  At that point the student could respond with areas in which they are struggling.  The information would then be passed on to Udacity employees for evaluation and possible response.  Thus, students would work to completion if those barriers are removed.
 
 The invariant metrics would be:
-- **Numbers of cookies:** The number of unique cookies that viewed the web site.  This number should not change if students receive a dialogue window inquiring about the course experience or not.
-- **Number of clicks:** The number of clicks before a dialogue window appears inquiring about course experience.  This number should also remain the same provided there are no other significant changes are being made to the web site.
+- **Number of user-ids:** That is, number of users who enroll in the free trial.  This number should remain the same for the control and experiment groups.
 
 The evaluation metrics would be:
 - **Net conversion:** This number is the user-ids to remain enrolled past the 14-day boundary--and thus make at least one payment--divided by the number of unique cookies to click the "Start free trial" button.  This number should improve if the hypothesis is true.  The number of users to enroll past 14 days should increase if the inquiry dialogue improves customer experience.
