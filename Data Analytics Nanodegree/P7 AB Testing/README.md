@@ -29,7 +29,7 @@ The unit of diversion is a cookie, although if the student enrolls in the free t
 
 - **Retention (d<sub>min</sub>=0.01):** This is the number of user-ids to remain enrolled past the 14-day boundary--and thus make at least one payment--divided by number of user-ids to complete checkout.  This metric is also affected by the free trial screener question.  More importantly, it does not ensure that a student is completing the course work.  It merely tallies student enrolled 14 days or more.  We could have 90% of students dropping out at day 15 and this metric would be the same as if they completed the entire course.
 
-##Experiment Goal
+###Experiment Goal
 We require all invariant metrics to pass within a 95% confident interval while having a positive experiment-control difference of statistical and practical significance for both evaluation metrics in order to reject the null hypotheses.
 
 ##Measuring Standard Deviation
@@ -74,6 +74,7 @@ This experiment does not incorporate any sensitive information (e.g. financial o
 There could be issues with coding, etc.  So, we would not want to divert 100% in the event of a web coding bug that might reduce customer experience.  Diverting 80% seems reasonable since the data could be collected inside of a month.  That would allow this experiment to be executed multiple times in a year if seasonality might be a factor for future experiments.
 
 ##Experiment Analysis
+
 ###Sanity Checks
 Below are the values expected to be observed, the actual observed value, and whether the metric passes a sanity check using a 95% confidence interval (CI).
 
@@ -125,11 +126,6 @@ The invariant metrics would be:
 
 The evaluation metrics would be:
 - **Net conversion:** This number is the user-ids to remain enrolled past the 14-day boundary--and thus make at least one payment--divided by the number of unique cookies to click the "Start free trial" button.  This number should improve if the hypothesis is true.  The number of users to enroll past 14 days should increase if the inquiry dialogue improves customer experience.
-
-
-
-
-
 
 ##Resources
 [1] Udacity A/B Test Final Project Instructions: 
