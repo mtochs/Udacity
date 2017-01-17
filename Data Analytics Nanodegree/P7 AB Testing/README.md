@@ -113,7 +113,7 @@ Bonferroni correction was not used for this project.  The Bonferroni correction 
 We did not use Bonferroni correction in this project since both evaluation metrics matched as expected.  Furthermore, the evaluation metric results did not dispute one another.  Had we seen conflicting results (e.g. one evaluation metric shows improvement and another shows decline) the correction may have been appropriate.
 
 ###Recommendation
-The null hypotheses is rejected since gross conversion showed a negative control-experiement difference while the net conversion difference was near zero.  At first glance
+The null hypotheses is rejected since gross conversion showed a negative control-experiement difference while the net conversion difference was near zero.  It's reasonable to assume we should implement the change; however, it is my recommendation to execute further testing.  The lower bound of the sample shows a negative change in net conversion is possible.  Thus, there is a potential risk of turning away students that would complete the 14 day trial and enroll.
 
 ##Follow-Up Experiment
 A follow up experiment to further increase customer experience could be to have a message pop up for someone who has signed up but is not utilizing the web site.  The criteria would be people that signed up with a site utilization of less than 5 hours by the 7th day.  A dialogue window could pop up on the site to ask something simple like "how is the training going?  Do you need any help?"  The unit of diversion could be user-id to follow the users that fit the criteria of the project.  All users that signed up for the course would need a user-id.
@@ -125,7 +125,7 @@ The invariant metrics would be:
 
 The evaluation metrics would be:
 - **Retention:** This is the number of user-ids to remain enrolled past the 14-day boundary--and thus make at least one payment--divided by number of user-ids to complete checkout.  This metric should show a difference if the follow-up experiment influences student experience.  For example, if the experiement improves student experience, there should be a positive difference in this metric.
-- **Net conversion:** This number is the user-ids to remain enrolled past the 14-day boundary--and thus make at least one payment--divided by the number of unique cookies to click the "Start free trial" button.  This number should improve if the hypothesis is true.  The number of users to enroll past 14 days should increase if the inquiry dialogue improves customer experience.
+
 
 ##Resources
 [1] Udacity A/B Test Final Project Instructions: 
