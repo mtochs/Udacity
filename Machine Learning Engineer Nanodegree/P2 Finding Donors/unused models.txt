@@ -1,0 +1,18 @@
+#### Unused Models
+- Gaussian Naive Bayes (GaussianNB)
+    - Real-world application: Using text analysis to create probabilities of word useage.  Model can be used to predict the author.
+    - Strengths: Requires a small number of training data to estimate parameters [2]
+    - Weaknesses: Model investigates all features independently.  Thus, if two features correlate, NB will not identify that.
+    - Project application: Model can help quickly identify the features that correlate closely with above \$50k income.  Those features can then be used to identify perspective donor income.
+
+- Stochastic Gradient Descent Classifier (SGDC)
+    - Real-world application: 
+    - Strengths: Overcomes premature optimization levels.  It can provide similar value as Gradient Descent while not taking as much compute power.[3]
+    - Weaknesses: Generally used for linear classifiers. [4]  Thus, it might not be a good fit for non-linearly separable data.
+    - Project application: This model would be good for the project as it reduces computation time for very large data sets.
+
+- Logistic Regression
+    - Real-world application: Model can be used to estimate weight with height as an input.
+    - Strengths: Very fast computing.
+    - Weaknesses: Very easy to overfitting or underfitting due to its dependence on linear function estimation.
+    - Project application: Reduces feature inputs into a function estimation.  Model can provide an easy-to-understand function to model prediction.
