@@ -1,9 +1,22 @@
-#### Unused Models
+*Gaussian Naive Bayes (GaussianNB)
+Decision Trees
+*Ensemble Methods (Bagging, AdaBoost, Random Forest, Gradient Boosting)
+K-Nearest Neighbors (KNeighbors)
+*Stochastic Gradient Descent Classifier (SGDC)
+Support Vector Machines (SVM)
+*Logistic Regression
+
 - Gaussian Naive Bayes (GaussianNB)
     - Real-world application: Using text analysis to create probabilities of word useage.  Model can be used to predict the author.
     - Strengths: Requires a small number of training data to estimate parameters [2]
     - Weaknesses: Model investigates all features independently.  Thus, if two features correlate, NB will not identify that.
     - Project application: Model can help quickly identify the features that correlate closely with above \$50k income.  Those features can then be used to identify perspective donor income.
+
+- Ensemble Methods (Bagging, AdaBoost, Random Forest, Gradient Boosting)
+    - Real-world application: Providing movie suggestions based on previous movie preferences [1]
+    - Strengths: Uses many different models to see which one provides the best results.  Reduces negative affects of bias.
+    - Weaknesses: Usually requires more computation time.
+    - Project application: This is a good fit for the project since it uses mutliple models for predicting.  Thus, we aren't tied to one specific model for assessing accuracy.
 
 - Stochastic Gradient Descent Classifier (SGDC)
     - Real-world application: 
